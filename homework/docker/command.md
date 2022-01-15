@@ -10,7 +10,7 @@ build/Dockerfile
 **构建本地镜像**
 
 ```shell
-# cd build
+cd build
 docker build -t sunxiaocheninsun/httpserver:1.0 .
 ```
 
