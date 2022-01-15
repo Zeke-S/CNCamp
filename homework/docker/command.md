@@ -23,7 +23,7 @@ docker push sunxiaocheninsun/httpserver:1.0
 **启动镜像**
 
 ```shell
-docker pull sunxiaocheninsun/httpserver:1.0
+# docker pull sunxiaocheninsun/httpserver:1.0
 docker run -i -p 8090:8090 --rm sunxiaocheninsun/httpserver:1.0 
 ```
 
