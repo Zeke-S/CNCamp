@@ -215,7 +215,8 @@
   // 将新的进程<pid>写入cpudemo cgroup进程列表
   sudo bash -c 'echo 24996 > cgroup.procs'
   // 限制CPU的绝对时间, 只占用一个cpu
-  sudo bash -c 'echo 100000 > cpu.cfs_quota_us'
+  
+  
   ```
 
   **Linux调度器：**
@@ -229,6 +230,43 @@
 
   
 
+- OverLayFS实验
+
+  ```shell
+  cd 
+  mkdir overlayfs ; cd overlayfs
+  mkdir upper lower merged work
+  echo "from lover" > lower/in_lower.txt
+  echo "from upper" > upper/in_upper.txt
+  echo "from lower" > lower/in_both.txt
+  echo "from upper" > upper/in_both.txt
+  # 查看当前目录结构
+  tree .
+  
+  ```
+  
+  
+  
+- OCI容器标准 Open Container Initiative
+
+  镜像标准 Image Specifiaction : 定义应用如何打包
+  
+  运行时标准 Runtime Specification : 定义如何解压应用包并运行
+  
+  分发标准 Distribution Specification : 定义如何分发容器镜像
+  
+- docker 网络模式
+
+  1. Null (--net=None)
+  
+     把容器放入独立的网络空间但是不做任何配置
+  
+  2. Host
+  
+  3. Container
+  
+  4. Bridge(--net=bridge)
+  
 - 
 
   
